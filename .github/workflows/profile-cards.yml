@@ -1,0 +1,88 @@
+name: Refresh profile cards
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # every day at 03:17 UTC
+  workflow_dispatch:        # run manually from the Actions tab
+  push:
+    branches: [main]
+    paths: [".github/workflows/profile-cards.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      THEME: theme=tokyonight&hide_border=true&border_radius=10
+    steps:
+      - uses: actions/checkout@v4
+
+      # ---------- Stats & languages ----------
+      - name: Stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&${{ env.THEME }}
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&${{ env.THEME }}
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ---------- Pinned repositories ----------
+      - name: Pin - agentic-customer-support-bot
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=agentic-customer-support-bot&${{ env.THEME }}
+          path: profile/pin-agentic-customer-support-bot.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pin - enterprise-ai-assistant
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=enterprise-ai-assistant&${{ env.THEME }}
+          path: profile/pin-enterprise-ai-assistant.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pin - MinimalApiCleanArchitecture
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=MinimalApiCleanArchitecture&${{ env.THEME }}
+          path: profile/pin-MinimalApiCleanArchitecture.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pin - CQRS-EventSourcing
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=CQRS-EventSourcing&${{ env.THEME }}
+          path: profile/pin-CQRS-EventSourcing.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ---------- Contribution snake ----------
+      - name: Contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            profile/snake-dark.svg?palette=github-dark
+            profile/snake-light.svg
+
+      # ---------- Commit ----------
+      - name: Commit generated SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "chore: refresh profile cards" || exit 0
+          git push
