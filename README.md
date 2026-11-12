@@ -1,6 +1,6 @@
 <!-- ===================== HEADER ===================== -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:512BD4,50:1E3A8A,100:0EA5E9&height=210&section=header&text=Ahmet%20T%C3%BCg%C3%BCr&fontSize=58&fontColor=ffffff&fontAlignY=36&desc=Senior%20.NET%20Architect%20%E2%80%A2%20Agentic%20AI%20Systems&descSize=19&descAlignY=58&animation=fadeIn" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:512BD4,50:1E3A8A,100:0EA5E9&height=210&section=header&text=Ahmet%20T%C3%BCg%C3%BCr&fontSize=58&fontColor=ffffff&fontAlignY=36&desc=Senior%20.NET%20Developer%20%E2%80%A2%20Agentic%20AI%20Systems&descSize=19&descAlignY=58&animation=fadeIn" />
 </p>
 
 <p align="center">
@@ -22,10 +22,10 @@
 ## 🧭 About me
 
 ```csharp
-public sealed record Architect
+public sealed record Developer
 {
     public string Name      => "Ahmet Tügür";
-    public string Role      => "Senior .NET Architect · Kanban Master";
+    public string Role      => "Senior .NET Developer";
     public string[] Focus   => ["Multi-Agent AI Systems", "Distributed Architecture", "Observability"];
 
     public string[] Patterns => [
@@ -44,7 +44,6 @@ public sealed record Architect
 - 🏗️ Long-time practitioner of **Clean / Hexagonal Architecture, DDD, CQRS and Event Sourcing** — in both **.NET** and **Spring Boot**
 - 🔭 Observability-first: every agent step, LLM call and tool invocation is traced with **OpenTelemetry**
 - 🎓 Mentor to interns and junior developers — I write training material on architecture and agentic AI
-- 📋 Lead my team with **Kanban**: flow over ceremony
 
 ---
 
