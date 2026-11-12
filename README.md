@@ -119,8 +119,8 @@ flowchart LR
 ### 🤖 AI & Agents
 
 <p align="center">
-  <a href="https://github.com/ahmettugur/agentic-customer-support-bot"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmettugur&repo=agentic-customer-support-bot&theme=tokyonight&hide_border=true&border_radius=10" /></a>
-  <a href="https://github.com/ahmettugur/enterprise-ai-assistant"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmettugur&repo=enterprise-ai-assistant&theme=tokyonight&hide_border=true&border_radius=10" /></a>
+  <a href="https://github.com/ahmettugur/agentic-customer-support-bot"><img src="./profile/pin-agentic-customer-support-bot.svg" /></a>
+  <a href="https://github.com/ahmettugur/enterprise-ai-assistant"><img src="./profile/pin-enterprise-ai-assistant.svg" /></a>
 </p>
 
 | Project | Highlights | Stack |
@@ -131,8 +131,8 @@ flowchart LR
 ### 🏛️ Architecture & Distributed Systems
 
 <p align="center">
-  <a href="https://github.com/ahmettugur/MinimalApiCleanArchitecture"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmettugur&repo=MinimalApiCleanArchitecture&theme=tokyonight&hide_border=true&border_radius=10" /></a>
-  <a href="https://github.com/ahmettugur/CQRS-EventSourcing"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmettugur&repo=CQRS-EventSourcing&theme=tokyonight&hide_border=true&border_radius=10" /></a>
+  <a href="https://github.com/ahmettugur/MinimalApiCleanArchitecture"><img src="./profile/pin-MinimalApiCleanArchitecture.svg" /></a>
+  <a href="https://github.com/ahmettugur/CQRS-EventSourcing"><img src="./profile/pin-CQRS-EventSourcing.svg" /></a>
 </p>
 
 | Project | Highlights | Stack |
@@ -209,20 +209,20 @@ flowchart LR
 ## 📊 GitHub activity
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=ahmettugur&show_icons=true&theme=tokyonight&hide_border=true&border_radius=10&count_private=true&include_all_commits=true" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmettugur&layout=compact&theme=tokyonight&hide_border=true&border_radius=10&langs_count=8" />
+  <img height="170" src="./profile/stats.svg" alt="GitHub stats" />
+  <img height="170" src="./profile/top-langs.svg" alt="Top languages" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=ahmettugur&theme=tokyonight&hide_border=true&border_radius=10" />
+  <img src="https://streak-stats.demolab.com?user=ahmettugur&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub streak" />
 </p>
 
 <p align="center">
-  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=ahmettugur&theme=tokyo-night&hide_border=true&area=true&radius=10" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ahmettugur&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&column=7" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile/snake-light.svg" />
+    <img alt="Contribution snake" src="./profile/snake-dark.svg" />
+  </picture>
 </p>
 
 ---
